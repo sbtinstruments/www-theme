@@ -3,7 +3,7 @@
 into the {body} of the default.hbs template --}}
 
 {{!-- The big featured header, it uses blog cover image as a BG if available --}}
-<header class="site-header outer {{#if @blog.cover_image}}" style="background-image: url({{@blog.cover_image}}){{else}}no-cover{{/if}}">
+<header class="site-header outer {{#if @blog.cover_image}}" style="background-image: radial-gradient(circle at center, rgba(0,0,0,1.0) 0%, rgba(0,0,0,0.05) 85%, rgba(0,0,0,0.0) 100%), url({{@blog.cover_image}}){{else}}no-cover{{/if}}">
     <div class="inner">
         <div class="site-header-content">
             <h1 class="site-title">
@@ -13,7 +13,18 @@ into the {body} of the default.hbs template --}}
                     {{@blog.title}}
                 {{/if}}
             </h1>
-            <h2 class="site-description">{{@blog.description}}</h2>
+            {{! Description }}
+            <h1 class="site-title">Bacteria Detection</h1>
+            <h2 class="site-description">Real-time</h2>
+            <p class="site-motivation">
+				SBT Instruments aims to revolutionize the market for bacteria detection by introducing our patent-pending technology in a product which performs real-time detection of bacteria on surfaces and in liquids.
+				<a class="read-more" href="technology">&raquo;</a>
+            </p>
+			<form id="newsletter" class="newsletter" action="https://sbtaqua.us11.list-manage.com/subscribe/post-json?u=0f3392790131fb82c930d8467&id=b509011eca" method="get" target="_blank" novalidate>
+				<input type="email" value="" name="EMAIL" placeholder="E-mail">
+				<input type="submit" value="Sign up" name="subscribe">
+				<p>Receive regular updates via our newsletter.</p>
+			</form>
         </div>
         {{> "site-nav"}}
     </div>
