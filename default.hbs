@@ -26,15 +26,58 @@
         {{{body}}}
 
         {{!-- The footer at the very bottom of the screen --}}
-        <footer class="site-footer outer">
+        <footer id="contact" class="site-footer outer">
             <div class="site-footer-content inner">
-                <section class="copyright"><a href="{{@blog.url}}">{{@blog.title}}</a> &copy; {{date format="YYYY"}}</section>
-                <nav class="site-footer-nav">
-                    <a href="{{@blog.url}}">Latest Posts</a>
-                    {{#if @blog.facebook}}<a href="{{facebook_url @blog.facebook}}" target="_blank">Facebook</a>{{/if}}
-                    {{#if @blog.twitter}}<a href="{{twitter_url @blog.twitter}}" target="_blank">Twitter</a>{{/if}}
-                    <a href="https://ghost.org" target="_blank">Ghost</a>
-                </nav>
+				<section class="map">
+					<div class="overlay" onClick="style.pointerEvents='none'"></div>
+					<iframe src="https://www.google.com/maps/embed/v1/place?key=AIzaSyAFbuPTZ_x-TkHiVi_QO1l5qT5alxGyFQk&q=SBT+Instruments+ApS&maptype=satellite&zoom=17" frameborder="0" allowfullscreen></iframe>
+				</section>
+
+				<section class="contact-information">
+					<div class="wrapper">
+						<h1><a href="{{@blog.url}}">{{@blog.title}}</a></h1>
+						<address>
+							<strong>
+							SBT Instruments<br />
+							Symfonivej 37<br />
+							2730 Herlev<br />
+							<a href="mailto:info@sbtinstruments.com">info@sbtinstruments.com</a><br />
+							</strong>
+							<br />
+							
+							<div class="contact">
+								<img class="portrait" src="https://storage.sbtinstruments.com/ghost/2017/08/ges_resized.png" />
+								<div class="info">
+									<span class="title">CEO</span><br />
+									<a href="/team#gustaverikskandsceo">Gustav Erik Skands</a><br />
+									<span class="label">Phone:</span><a href="tel:20765773">20 76 57 73</a><br />
+									<span class="label">E-mail:</span><a href="mailto:ges@sbtinstruments.com">ges@sbtinstruments.com</a><br />
+								</div>
+							</div>
+
+							<div class="contact">
+								<img class="portrait" src="https://storage.sbtinstruments.com/ghost/2017/08/cvb_resized.png" />						
+								<div class="info">
+									<span class="title">CTO</span><br />
+									<a href="/team#christianvintherbertelsencto">Christian Vinther Bertelsen</a><br />
+									<span class="label">Phone:</span><a href="tel:28573339">28 57 33 39</a><br />
+									<span class="label">E-mail:</span><a href="mailto:cvb@sbtinstruments.com">cvb@sbtinstruments.com</a><br />
+								</div>
+							</div>
+							
+							<div class="contact">
+								<img class="portrait" src="https://files.sbtaqua.com/ghost/images/2015/07/fpa_resized.png" />
+								<div class="info">
+									<span class="title">CIO</span><br />
+									<a href="/team#frederikpeteraalundcio">Frederik Peter Aalund</a><br />
+									<span class="label">Phone:</span><a href="tel:30340086">30 34 00 86</a><br />
+									<span class="label">E-mail:</span><a href="mailto:fpa@sbtinstruments.com">fpa@sbtinstruments.com</a><br />
+								</div>
+							</div>
+						</address>
+						<span class="copyright"><a href="{{@blog.url}}">{{@blog.title}}</a> &copy; {{date format="YYYY"}}</span>
+					</div>
+				</section>
             </div>
         </footer>
 
@@ -62,6 +105,7 @@
         crossorigin="anonymous">
     </script>
     <script type="text/javascript" src="{{asset "js/jquery.fitvids.js"}}"></script>
+    <script type="text/javascript" src="{{asset "js/arctic-scroll.js"}}"></script>
 
     {{#if pagination.pages}}
     <script>
