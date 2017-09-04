@@ -1,7 +1,7 @@
 {
     "name": "www-theme",
     "description": "The default personal blogging theme for Ghost. Beautiful, minimal and responsive.",
-    "version": "2.1.0-sbt-alpha.3",
+    "version": "2.1.0-sbt-alpha.4",
     "engines": {
         "ghost": ">=1.2.0"
     },
