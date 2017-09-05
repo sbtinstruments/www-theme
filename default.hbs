@@ -29,53 +29,69 @@
         <footer id="contact" class="site-footer outer">
             <div class="site-footer-content inner">
 				<section class="map">
-					<div class="overlay" onClick="style.pointerEvents='none'"></div>
-					<iframe src="https://www.google.com/maps/embed/v1/place?key=AIzaSyAFbuPTZ_x-TkHiVi_QO1l5qT5alxGyFQk&q=SBT+Instruments+ApS&maptype=satellite&zoom=17" frameborder="0" allowfullscreen></iframe>
+					<div id="map"></div>
 				</section>
 
 				<section class="contact-information">
-					<div class="wrapper">
-						<h1><a href="{{@blog.url}}">{{@blog.title}}</a></h1>
-						<address>
-							<strong>
-							SBT Instruments<br />
+					<img class="logo" src="https://storage.sbtinstruments.com/ghost/2017/08/Icon_Orange%402x.png">
+					<h1>{{@blog.title}}</h1>
+					<address>
+						<p>
 							Symfonivej 37<br />
 							2730 Herlev<br />
+							Denmark<br />
 							<a href="mailto:info@sbtinstruments.com">info@sbtinstruments.com</a><br />
-							</strong>
-							<br />
-							
-							<div class="contact">
-								<img class="portrait" src="https://storage.sbtinstruments.com/ghost/2017/08/ges_resized.png" />
-								<div class="info">
-									<span class="title">CEO</span><br />
-									<a href="/team#gustaverikskandsceo">Gustav Erik Skands</a><br />
-									<span class="label">Phone:</span><a href="tel:20765773">20 76 57 73</a><br />
-									<span class="label">E-mail:</span><a href="mailto:ges@sbtinstruments.com">ges@sbtinstruments.com</a><br />
-								</div>
-							</div>
+						</p>
+					</address>
+					<div class="contact">
+						<img class="portrait" src="https://storage.sbtinstruments.com/ghost/2017/09/Gustav-Erik-Skands-1.jpg" />
+						<div class="info">
+							<h3>Chief Executive Officer</h3>
+							<a href="/team#gustaverikskandsceo">Gustav Erik Skands</a><br />
+							<span class="label">Phone:</span><a href="tel:20765773">20 76 57 73</a><br />
+							<span class="label">E-mail:</span><a href="mailto:ges@sbtinstruments.com">ges@sbtinstruments.com</a><br />
+						</div>
+					</div>
 
-							<div class="contact">
-								<img class="portrait" src="https://storage.sbtinstruments.com/ghost/2017/08/cvb_resized.png" />						
-								<div class="info">
-									<span class="title">CTO</span><br />
-									<a href="/team#christianvintherbertelsencto">Christian Vinther Bertelsen</a><br />
-									<span class="label">Phone:</span><a href="tel:28573339">28 57 33 39</a><br />
-									<span class="label">E-mail:</span><a href="mailto:cvb@sbtinstruments.com">cvb@sbtinstruments.com</a><br />
-								</div>
-							</div>
-							
-							<div class="contact">
-								<img class="portrait" src="https://files.sbtaqua.com/ghost/images/2015/07/fpa_resized.png" />
-								<div class="info">
-									<span class="title">CIO</span><br />
-									<a href="/team#frederikpeteraalundcio">Frederik Peter Aalund</a><br />
-									<span class="label">Phone:</span><a href="tel:30340086">30 34 00 86</a><br />
-									<span class="label">E-mail:</span><a href="mailto:fpa@sbtinstruments.com">fpa@sbtinstruments.com</a><br />
-								</div>
-							</div>
-						</address>
-						<span class="copyright"><a href="{{@blog.url}}">{{@blog.title}}</a> &copy; {{date format="YYYY"}}</span>
+					<div class="contact">
+						<img class="portrait" src="https://storage.sbtinstruments.com/ghost/2017/09/Christian-Vinther-Bertelsen-1.jpg" />
+						<div class="info">
+							<h3>Chief Technology Officer</h3>
+							<a href="/team#christianvintherbertelsencto">Christian Vinther Bertelsen</a><br />
+							<span class="label">Phone:</span><a href="tel:28573339">28 57 33 39</a><br />
+							<span class="label">E-mail:</span><a href="mailto:cvb@sbtinstruments.com">cvb@sbtinstruments.com</a><br />
+						</div>
+					</div>
+					
+					<div class="contact">
+						<img class="portrait" src="https://storage.sbtinstruments.com/ghost/2017/09/Frederik-Peter-Aalund-1.jpg" />
+						<div class="info">
+							<h3>Chief Information Officer</h3>
+							<a href="/team#frederikpeteraalundcio">Frederik Peter Aalund</a><br />
+							<span class="label">Phone:</span><a href="tel:30340086">30 34 00 86</a><br />
+							<span class="label">E-mail:</span><a href="mailto:fpa@sbtinstruments.com">fpa@sbtinstruments.com</a><br />
+						</div>
+					</div>
+					<div class="contact">
+						<img class="portrait" src="https://storage.sbtinstruments.com/ghost/2017/09/Martin-Wraber-1.jpg" />
+						<div class="info">
+							<h3>Product Development Executive</h3>
+							<a href="/team#martinwraberproductdevelopmentexecutive">Martin Wraber</a><br />
+							<span class="label">Phone:</span><a href="tel:31273332">31 27 33 32</a><br />
+							<span class="label">E-mail:</span><a href="mailto:mwr@sbtinstruments.com">mwr@sbtinstruments.com</a><br />
+						</div>
+					</div>
+					<div class="contact">
+						<img class="portrait" src="https://storage.sbtinstruments.com/ghost/2017/09/Tobias-Groot-Nielsen.jpg" />
+						<div class="info">
+							<h3>Product Developer</h3>
+							<a href="/team#tobiasgrootnielsenproductdeveloper">Tobias Groot Nielsen</a><br />
+							<span class="label">Phone:</span><a href="tel:28491744">28 49 17 44</a><br />
+							<span class="label">E-mail:</span><a href="mailto:tgn@sbtinstruments.com">tgn@sbtinstruments.com</a><br />
+						</div>
+					</div>
+					<div class="copyright">
+						{{@blog.title}} &copy; {{date format="YYYY"}}
 					</div>
 				</section>
             </div>
@@ -106,6 +122,24 @@
     </script>
     <script type="text/javascript" src="{{asset "js/jquery.fitvids.js"}}"></script>
     <script type="text/javascript" src="{{asset "js/arctic-scroll.js"}}"></script>
+    <script>
+		function initMap() {
+			var sbtPosition = { lat: 55.715285, lng: 12.452657 };
+			var map = new google.maps.Map(document.getElementById('map'), {
+				zoom: 16,
+				center: sbtPosition,
+				disableDefaultUI: true
+			});
+			var marker = new google.maps.Marker({
+				position: sbtPosition,
+				map: map,
+				title: 'SBT Instruments'
+			});
+		}
+    </script>
+    <script async defer
+		src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAFbuPTZ_x-TkHiVi_QO1l5qT5alxGyFQk&callback=initMap">
+    </script>
 
     {{#if pagination.pages}}
     <script>

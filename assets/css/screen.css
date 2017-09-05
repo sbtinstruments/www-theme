@@ -92,18 +92,17 @@ body {
     .home-template .post-feed,
     .tag-template .post-feed,
     .author-template .post-feed {
-        margin-top: -40px;
         padding-top: 0;
     }
 }
 
 .home-template .site-nav {
-	position: absolute;
-	top: 0;
+	display: flex;
+	order: -1;
 	width: 100%;
 	max-width: 1040px;
 	height: 40px;
-	margin: 12px 0;
+	margin: 0 0 12px;
 }
 
 
@@ -150,6 +149,11 @@ body {
     display: none;
 }
 */
+
+.site-header .inner {
+	display: flex;
+	flex-direction: column;
+}
 
 .site-header-content {
     display: flex;
@@ -248,7 +252,7 @@ body {
     border-radius: 4px 0 0 4px;
     background: transparent;
     color: rgba(255, 255, 255, 0.7);
-    
+
     transition: 0.3s opacity;
 }
 .newsletter input[type="email"]:focus {
@@ -261,7 +265,7 @@ body {
     border-radius: 0 4px 4px 0;
     background: #fff;
     color: #000;
-    
+
     transition: 0.3s all;
 }
 
@@ -518,6 +522,9 @@ The knock-on effect of this is ugly browser-scroll bars at the bottom, so 80px o
         display: none;
     }
 
+	.site-header-content {
+		height: 80vh;
+	}
     .site-title {
         font-size: 3rem;
     }
@@ -915,6 +922,7 @@ Usage (In Ghost edtior):
 /* Portrait images (#portrait) */
 .post-full-content img[src$="#portrait"] {
 	border-radius: 100%;
+	max-width: 50%;
 }
 
 
@@ -1797,6 +1805,7 @@ Usage (In Ghost editor):
 
 .error-template .site-main {
     padding: 7vw 4vw;
+	color: #fff;
 }
 
 .site-nav-center {
@@ -2014,34 +2023,28 @@ Usage (In Ghost editor):
 
 .site-footer {
     position: relative;
-    color: #fff;
-    background: color(var(--darkgrey) l(-15%));
-}
-
-.site-footer.outer {
-	padding: 0;
+    color: #000;
+    /* background: color(var(--darkgrey) l(-15%)); */
 }
 
 .site-footer-content {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: stretch;
     flex-wrap: wrap;
-    color: rgba(255,255,255,0.7);
-    font-size: 1.3rem;
-}
-
-.site-footer-content.inner {
-	max-width: none;
+    /*color: rgba(255,255,255,0.7);*/
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+	overflow: hidden;
 }
 
 .site-footer-content a {
-    color: rgba(255,255,255,0.7);;
+    /*color: rgba(255,255,255,0.7);;*/
 }
 
 .site-footer-content a:hover {
-    color: rgba(255,255,255,1);
-    text-decoration: none;
+    /*color: rgba(255,255,255,1);*/
+    /*text-decoration: none;*/
 }
 
 .site-footer-nav {
@@ -2069,22 +2072,13 @@ Usage (In Ghost editor):
     display: none;
 }
 
-.site-footer .overlay {
-	position: absolute; 
-	width: 100%;
-	height: 80vh;
-	min-height: 568px;
-	top: 0;
-	background: transparent; 
-}
-
 .site-footer .map {
-	width: 100%;
+	flex: 0 1 50%;
 }
 
-.site-footer .map iframe {
+.site-footer .map #map {
 	width: 100%;
-	height: 80vh;
+	height: 100%;
 	min-height: 568px;
 }
 
@@ -2100,93 +2094,81 @@ Usage (In Ghost editor):
 
 /* Contact Information */
 .site-footer .contact-information {
-	position: absolute;
-	width: 450px;
-	height: 80vh;
+	flex: 0 1 50%;
+	padding: 25px;
 	min-height: 568px;
-	right: 0;
-	bottom: 0;
-    background: color(var(--main) l(-10%));
+	background: #fff;
 }
 
 .site-footer .contact-information h1 {
-	font-size: 4.0rem;
+	font-size: 3.0rem;
+	margin-bottom: 5px;
+}
+
+.site-footer .contact-information address p {
+	font-size: 2rem;
+	line-height: 1.2em;
+	margin-bottom: 35px;
+}
+
+.site-footer .contact-information .logo {
+	display: none;
+	height: 150px;
+	float: right;
 }
 
 .site-footer .contact-information .contact {
-	height: 120px;
+	height: 75px;
+	margin-top: 25px;
+}
+.site-footer .contact-information .contact:first-of-type {
+	margin-top: 0;
 }
 
 .site-footer .contact-information .contact .info {
 	display: table-cell;
 	vertical-align: middle;
-	height: 100px;
+	line-height: 1.2em;
+}
+
+.site-footer .contact-information .contact .info a {
+	color: #000;
+}
+.site-footer .contact-information .contact .info a[href^=mailto] {
+	color: var(--accent);
 }
 
 .site-footer .contact-information .contact .portrait {
 	float: right;
-	height: 100px;
+	max-height: 100%;
 	border-radius: 100%;
 }
 
-.site-footer .wrapper {
-	padding: 30px;
-}
 
-.site-footer address {
-	font-size: 1.65rem;
-	line-height: 2.2rem;
-	font-style: normal;
+.site-footer .info h3 {
+	font-size: 1.5rem;
+	font-weight: bold;
+	margin-top: 0;
+	margin-bottom: 2.5px;
 }
-
-
-.site-footer address .title {
-	font-size: 2.0rem;
-}
-.site-footer address .label {
-	display: inline-block;
-	width: 65px;
-	font-size: 1.4rem;
-}
-
-.site-footer a {
-	color: #fff;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-.site-footer a:hover {
-    border-bottom: #bbc7cc 1px solid;
+.site-footer .label {
+	display: none;
 }
 
 .copyright {
-	position: absolute;
-	bottom: 30px;
+	margin-top: 35px;
+	color: var(--midgrey);
 }
 
 @media (max-width: 900px) {
 	.site-footer .contact-information h1 {
 		font-size: 2rem;
-		margin-bottom: 1em;
 	}
 
-	.site-footer .contact-information {
-		width: 200px;
-	}
-	.site-footer .contact-information .wrapper {
-		padding: 15px;
-	}
 	.site-footer .contact-information .contact .portrait {
 		display: none;
 	}
 	.site-footer .contact-information .copyright {
-		bottom: 15px;
-	}
-	.site-footer address .label {
-		display: none;
-	}
-	.site-footer address {
-		font-size: 1.3rem;
 	}
 }
 
