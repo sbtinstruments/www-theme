@@ -160,8 +160,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 65vh;
-    padding: 10vw 4vw;
+    padding: 5vw 4vw;
     text-align: center;
 }
 
@@ -189,6 +188,7 @@ body {
 }
 
 .site-motivation {
+	max-width: 100%; /* Fix for Internet Explorer 11 */
 	z-index: 10;
 	margin-top: 1rem;
 	font-size: 1.75rem;
@@ -522,9 +522,6 @@ The knock-on effect of this is ugly browser-scroll bars at the bottom, so 80px o
         display: none;
     }
 
-	.site-header-content {
-		height: 80vh;
-	}
     .site-title {
         font-size: 3rem;
     }
@@ -835,6 +832,10 @@ The first (most recent) post in the list is styled to be bigger than the others 
     flex-direction: column;
     align-items: center;
     max-width: 920px;
+}
+
+.kg-card-markdown > * {
+    max-width: 100%; /* Fix for Internet Explorer 11 */
 }
 
 .post-full-content h1,
@@ -2031,6 +2032,7 @@ Usage (In Ghost editor):
     display: flex;
     justify-content: space-between;
     align-items: stretch;
+    align-content: stretch;
     flex-wrap: wrap;
     /*color: rgba(255,255,255,0.7);*/
 	border-top-left-radius: 5px;
@@ -2094,7 +2096,7 @@ Usage (In Ghost editor):
 
 /* Contact Information */
 .site-footer .contact-information {
-	flex: 0 1 50%;
+	flex: 1 1;
 	padding: 25px;
 	min-height: 568px;
 	background: #fff;
