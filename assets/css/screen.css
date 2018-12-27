@@ -923,7 +923,7 @@ Usage (In Ghost edtior):
 /* Portrait images (#portrait) */
 .post-full-content img[src$="#portrait"] {
 	border-radius: 100%;
-	max-width: 50%;
+	max-width: 100%;
 }
 
 
